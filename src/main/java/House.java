@@ -53,19 +53,19 @@ public class House extends Asset{
         switch (this.condition){
 
             case 1 -> {pricePerSquareFoot=new BigDecimal("180.00");
-                System.out.println("Excellent");
+
             }
             case 2->{
                 pricePerSquareFoot=new BigDecimal("130.00");
-                System.out.println("Good");
+
             }
             case 3->{
                 pricePerSquareFoot=new BigDecimal("90.00");
-                System.out.println("Fair");
+
             }
             case 4->{
                 pricePerSquareFoot=new BigDecimal("80.00");
-                System.out.println("Poor");
+
             }
             default -> {
                 System.out.println("invalid condition");

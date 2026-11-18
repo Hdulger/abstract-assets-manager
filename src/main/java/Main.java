@@ -22,41 +22,51 @@ public class Main {
 
         //After the abstract class
 
-        assets.add(new House("House", "2000", housePrice, "NY", 6, 25, 3));
+        assets.add(new House("House", "2000", housePrice, "NY", 4, 25, 3));
         assets.add(new Vehicle("Car", "2020", carPrice, "Brooklyn", 2025, 10000 ));
         assets.add(new Vehicle("Toyota", "2025", toyotaPrice, "Brooklyn", 2025, 10000 ));
         assets.add(new Cash("Cash", "2024", BigDecimal.ZERO, BigDecimal.valueOf(2000)));
+        assets.add(new Cash("Cash", "2026", BigDecimal.ZERO, BigDecimal.valueOf(5000)));
 
 
 
 
         BigDecimal netWorth=BigDecimal.ZERO;
         BigDecimal vehicleTotal=BigDecimal.ZERO;
+        BigDecimal cashAmount=BigDecimal.ZERO;
         int charmTotal=0;
 
         for (Asset as:assets){
-            System.out.println( as.getDescription()+as.getValue());
-            netWorth=netWorth.add(as.getValue());
-            System.out.println(netWorth);
+           // System.out.println( as.getDescription()+as.getValue());
+            netWorth=netWorth.add(as.
+                    getValue());
+
             if(as instanceof Vehicle){
                 vehicleTotal=vehicleTotal.add(as.getValue());
-                System.out.println(vehicleTotal);
+
 
             }
             if(as instanceof Vehicle){
                 Vehicle vehicleCharmTotal=(Vehicle) as;//The reason we cast here, there is no charm total in assets while there is in vehicles.
                 charmTotal+=vehicleCharmTotal.charmTotal();
-                System.out.println(charmTotal);//we can use the casting with different classes too.
+
 
             }
             if(as instanceof Cash){
                 Cash cash=(Cash) as;
+                cashAmount=cashAmount.add(as.getValue());
 
-                System.out.println( "Cash: "+ as.getValue());
+
             }
+            //System.out.println( "Cash from: "+as.getDateAcquired()+" is "+ as.getValue());
+
         }
 
 
+        System.out.println("Total cash: "+cashAmount);
+        System.out.println("netWorth="+netWorth);
+        System.out.println("Total Charm="+charmTotal);//we can use the casting with different classes too.
+        System.out.println("Total Vehicle:"+vehicleTotal);
 
 
     }
