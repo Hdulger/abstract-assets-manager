@@ -8,6 +8,7 @@ public class Main {
 
         BigDecimal housePrice=new BigDecimal("250000");
         BigDecimal carPrice=new BigDecimal("2000");
+        BigDecimal toyotaPrice=new BigDecimal("15000");
 
         //Before the abstract class
         //Asset a=new Asset("assets", "2010",carPrice);
@@ -23,6 +24,8 @@ public class Main {
 
         assets.add(new House("House", "2000", housePrice, "NY", 6, 25, 3));
         assets.add(new Vehicle("Car", "2020", carPrice, "Brooklyn", 2025, 10000 ));
+        assets.add(new Vehicle("Toyota", "2025", toyotaPrice, "Brooklyn", 2025, 10000 ));
+        assets.add(new Cash("Cash", "2024", BigDecimal.ZERO, BigDecimal.valueOf(2000)));
 
 
 
@@ -42,8 +45,14 @@ public class Main {
             }
             if(as instanceof Vehicle){
                 Vehicle vehicleCharmTotal=(Vehicle) as;//The reason we cast here, there is no charm total in assets while there is in vehicles.
-                charmTotal+=vehicleCharmTotal.charmTotal(); //we can use the casting with different classes too.
+                charmTotal+=vehicleCharmTotal.charmTotal();
+                System.out.println(charmTotal);//we can use the casting with different classes too.
 
+            }
+            if(as instanceof Cash){
+                Cash cash=(Cash) as;
+
+                System.out.println( "Cash: "+ as.getValue());
             }
         }
 
