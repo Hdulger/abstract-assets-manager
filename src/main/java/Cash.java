@@ -9,4 +9,5 @@ public class Cash extends Asset{
     public BigDecimal getValue() {
         return null;
     }
+
 }

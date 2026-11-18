@@ -78,7 +78,9 @@ public class House extends Asset{
 
         return houseValue.add(lotSizeValue);
 
-    }
+
+}
+
 
 
 }

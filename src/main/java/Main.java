@@ -9,6 +9,7 @@ public class Main {
         BigDecimal housePrice=new BigDecimal("250000");
         BigDecimal carPrice=new BigDecimal("2000");
 
+        //Before the abstract class
         //Asset a=new Asset("assets", "2010",carPrice);
 //        assets.add(a);
 //        a=new House("House", "2000", housePrice, "NY", 6, 25, 3);
@@ -18,6 +19,7 @@ public class Main {
 //        assets.add(a);
 
 
+        //After the abstract class
 
         assets.add(new House("House", "2000", housePrice, "NY", 6, 25, 3));
         assets.add(new Vehicle("Car", "2020", carPrice, "Brooklyn", 2025, 10000 ));
