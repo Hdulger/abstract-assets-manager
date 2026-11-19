@@ -25,8 +25,8 @@ public class Main {
         assets.add(new House("House", "2000", housePrice, "NY", 4, 25, 3));
         assets.add(new Vehicle("Car", "2020", carPrice, "Brooklyn", 2025, 10000 ));
         assets.add(new Vehicle("Toyota", "2025", toyotaPrice, "Brooklyn", 2025, 10000 ));
-        assets.add(new Cash("Cash", "2024", BigDecimal.ZERO, BigDecimal.valueOf(2000)));
-        assets.add(new Cash("Cash", "2026", BigDecimal.ZERO, BigDecimal.valueOf(5000)));
+        assets.add(new Cash("Cash", "2024", BigDecimal.valueOf(2000)));
+        assets.add(new Cash("Cash", "2026", BigDecimal.valueOf(5000)));
 
 
 
